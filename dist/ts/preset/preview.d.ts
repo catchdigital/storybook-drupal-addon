@@ -1,4 +1,4 @@
-export declare const decorators: ((StoryFn: StoryFunction, context: StoryContext) => any)[];
+export declare const decorators: (() => any)[];
 export declare const parameters: {
     server: {
         fetchStoryHtml: (url: string, path: string, params: Record<string, unknown>, context: {

@@ -13,13 +13,14 @@ function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefine
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var globalWindow = require('global/window');
 var heartBeatEmoji = "\uD83D\uDC93";
-var withDrupalTheme = function withDrupalTheme(StoryFn, context) {
+var withDrupalTheme = function withDrupalTheme() {
   var _useGlobals = (0, _addons.useGlobals)(),
     _useGlobals2 = _slicedToArray(_useGlobals, 2),
     globals = _useGlobals2[0],
     updateGlobals = _useGlobals2[1];
   var drupalTheme = globals === null || globals === void 0 ? void 0 : globals.drupalTheme;
   var supportedDrupalThemes = globals === null || globals === void 0 ? void 0 : globals.supportedDrupalThemes;
+  var context = (0, _addons.useStoryContext)();
   (0, _addons.useEffect)(function () {
     var _context$parameters = context.parameters,
       drupalTheme = _context$parameters.drupalTheme,
@@ -71,6 +72,6 @@ var withDrupalTheme = function withDrupalTheme(StoryFn, context) {
       });
     }
   }, [currentHash]);
-  return StoryFn(undefined, undefined);
+  return undefined;
 };
 exports.withDrupalTheme = withDrupalTheme;

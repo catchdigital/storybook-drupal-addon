@@ -46,6 +46,7 @@
     "@babel/preset-typescript": "^7.13.0",
     "@storybook/addon-essentials": "^7.0.2",
     "@storybook/react": "^7.0.2",
+    "@types/webpack-env": "^1.18.0",
     "auto": "^10.3.0",
     "babel-loader": "^8.1.0",
     "boxen": "^5.0.1",
@@ -90,5 +91,8 @@
   },
   "bugs": {
     "url": "https://github.com/catchdigital/storybook-drupal-addon/issues"
+  },
+  "dependencies": {
+    "global": "^4.4.0"
   }
 }

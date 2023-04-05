@@ -1,1 +1,1 @@
-export declare const withDrupalTheme: (StoryFn: StoryFunction, context: StoryContext) => any;
+export declare const withDrupalTheme: () => any;
