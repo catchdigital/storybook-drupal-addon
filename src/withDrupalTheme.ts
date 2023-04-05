@@ -1,17 +1,26 @@
-const globalWindow = require('global/window');
+// const globalWindow = require('global/window');
 import {
   useStoryContext,
   useEffect,
   useGlobals,
+  useState
 } from '@storybook/addons';
 
 const heartBeatEmoji = '\uD83D\uDC93';
 
 export const withDrupalTheme = (): any => {
+  const [gWindow, setGWindow] = useState(null);
   const [globals, updateGlobals] = useGlobals();
   const drupalTheme = globals?.drupalTheme;
   const supportedDrupalThemes = globals?.supportedDrupalThemes;
   const context = useStoryContext();
+
+  useEffect(() => {
+    if (window) {
+      setGWindow(window);
+    }
+  }, []);
+
   useEffect(() => {
     const {
       parameters: {drupalTheme, supportedDrupalThemes},
@@ -27,7 +36,7 @@ export const withDrupalTheme = (): any => {
 
   const currentHash = globals?.hash;
   useEffect(() => {
-    const hmr = globalWindow?.__whmEventSourceWrapper?.['/__webpack_hmr'];
+    const hmr = gWindow?.__whmEventSourceWrapper?.['/__webpack_hmr'];
     if (!hmr) {
       return;
     }
@@ -51,7 +60,7 @@ export const withDrupalTheme = (): any => {
       currentHash === newHash
         // If nothing changed in the Webpack hash, it may mean changes in the
         // server components.
-        ? globalWindow.document.location.reload()
+        ? gWindow.document.location.reload()
         // Store the hash in the globals because state will reset every time.
         : updateGlobals({hash: newHash});
     }
