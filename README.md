@@ -28,7 +28,7 @@ yarn global add sb@latest;
 sb init --builder webpack5 --type server
 # If you have a reason to use Webpack4 use the following instead:
 # sb init --type server
-yarn add -D @lullabot/storybook-drupal-addon
+yarn add -D catchdigital/storybook-drupal-addon
 ```
 
 ### 🌵 Configure Storybook
@@ -41,7 +41,7 @@ module.exports = {
   // ...
   addons: [
     // ...
-    '@lullabot/storybook-drupal-addon',
+    'catchdigital/storybook-drupal-addon',
   ],
   // ...
 };
@@ -88,7 +88,7 @@ As an addon author, you can use this library by adding it as a dependency and ad
 function config(entry = []) {
   return [
     ...entry,
-    require.resolve('@lullabot/storybook-drupal-addon/preview'), // <-- library's preview preset
+    require.resolve('catchdigital/storybook-drupal-addon/preview'), // <-- library's preview preset
     require.resolve('./dist/esm/preset/preview'), // <-- your addon's preview preset (if present)
   ];
 }
@@ -96,7 +96,7 @@ function config(entry = []) {
 function managerEntries(entry = []) {
   return [
     ...entry,
-    require.resolve('@lullabot/storybook-drupal-addon/manager'),
+    require.resolve('catchdigital/storybook-drupal-addon/manager'),
     require.resolve('./dist/esm/preset/manager'), // <-- your addon's manager (if present)
   ];
 }

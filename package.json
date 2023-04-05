@@ -1,5 +1,5 @@
 {
-  "name": "@lullabot/storybook-drupal-addon",
+  "name": "catchdigital/storybook-drupal-addon",
   "version": "1.0.27",
   "description": "Storybook addon to facilitate integrating Storybook with Drupal projects.",
   "keywords": [
@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lullabot/storybook-drupal-addon.git"
+    "url": "git+https://github.com/catchdigital/storybook-drupal-addon.git"
   },
   "author": "Mateu Aguiló Bosch <mateu@mateuaguilo.com> (e0ipso)",
   "license": "MIT",
@@ -88,6 +88,6 @@
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   },
   "bugs": {
-    "url": "https://github.com/Lullabot/storybook-drupal-addon/issues"
+    "url": "https://github.com/catchdigital/storybook-drupal-addon/issues"
   }
 }
