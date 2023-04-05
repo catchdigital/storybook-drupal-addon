@@ -1,5 +1,5 @@
 {
-  "name": "catchdigital/storybook-drupal-addon",
+  "name": "@catchdigital/storybook-drupal-addon",
   "version": "1.0.27",
   "description": "Storybook addon to facilitate integrating Storybook with Drupal projects.",
   "keywords": [
